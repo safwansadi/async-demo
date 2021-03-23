@@ -1,5 +1,4 @@
-console.log("before");
-
+console.log("welcome to the hell of callbacks..");
 getUser(1, function (user) {
   console.log("user", user);
   getRepositories(user.gitUser, (repos) => {
@@ -12,11 +11,9 @@ function getUser(id, callback) {
     callback({ id: id, gitUser: "safwan" });
   }, 2000);
 }
-console.log("after");
-
 function getRepositories(username, callback) {
   setTimeout(() => {
-    console.log("calling GitHub API..");
+    console.log(`loading git repositories of ${username}..`);
     callback(["repo1", "repo2", "repo3"]);
-  });
+  }, 2000);
 }
