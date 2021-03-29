@@ -1,4 +1,3 @@
-//callback replaced by promise
 function getUser(id) {
   console.log("Reading a user from database..");
   return new Promise((resolve, reject) => {
@@ -17,13 +16,6 @@ function getRepositories(username) {
     }, 2000);
   });
 }
-
-/*
-getUser(1)
-  .then((user) => getRepositories(user.gitUser))
-  .then((repos) => console.log(repos));
-*/
-//Async Await approach
 
 async function displayResults() {
   const user = await getUser();
