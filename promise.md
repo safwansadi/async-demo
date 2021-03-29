@@ -1,0 +1,1 @@
+A promise is an object that holds the eventual result of an assync operation. initially its in the panding state. if the async operation is fullfilled the state becomes resolved and if fails the pending state will be rejected
